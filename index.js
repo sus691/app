@@ -40,8 +40,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/todolist', (req,res,next)=>{
 
+    let day = "sunday";
 
-    day = sunday;    
+    let items  = ["Buy food", "Make food", "Eat food"];  
     
     res.render("list", {listtitle:day, newlistitems: items});
 });
