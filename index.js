@@ -20,7 +20,9 @@ app.set('view engine', 'ejs');
 
 
 
-
+app.get('/hello', (req,res,next)=>{
+    res.send('yea hello');
+});
 
 
 
