@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get('/todolist', (req,res)=>{
 
 
-    res.render('as');
+    res.render('/app/as');
 });
 
 
