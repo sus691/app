@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', (req,res,next)=>{
-    res.send('Hello fucking world ');
+    res.send('Hello fucking world  2');
 });
 
 
