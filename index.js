@@ -36,11 +36,8 @@ app.use(express.static("public"));
 
 app.get('/todolist', (req,res,next)=>{
 
-    let day = "sunday";
 
-    let items  = ["Buy food", "Make food", "Eat food"];  
-    
-    res.render("list", {listtitle:day, newlistitems: items});
+    res.render();
 });
 
 
