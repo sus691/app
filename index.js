@@ -32,24 +32,19 @@ app.use(bodyParser.urlencoded({extended: true}));
 //app.use(express.static("public"));
 
 
-app.get("/todolist", function(req, res){
 
+
+
+
+
+
+app.get('/todolist', (req,res,next)=>{
 
 
     day = sunday;    
     
     res.render("list", {listtitle:day, newlistitems: items});
-    
 });
-
-
-
-
-
-
-
-
-
 
 
 
