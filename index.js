@@ -37,7 +37,7 @@ app.use(express.static("public"));
 app.get('/todolist', (req,res,next)=>{
 
 
-    res.render();
+    res.render("as.ejs");
 });
 
 
