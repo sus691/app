@@ -6,16 +6,12 @@ import express from "express";
 import bodyParser from "body-parser";
 
 
-const PORT = 9000;
+const PORT = 9001;
 const app  = express();
 app.set('view engine', 'ejs');
 
 
 
-
-let day = "";
-
-let items  = ["Buy food", "Make food", "Eat food"];
 
 
 
@@ -29,7 +25,7 @@ let items  = ["Buy food", "Make food", "Eat food"];
 
 
 app.use(bodyParser.urlencoded({extended: true}));
-//app.use(express.static("public"));
+app.use(express.static("public"));
 
 
 
