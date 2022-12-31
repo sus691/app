@@ -1,9 +1,9 @@
 //const functions = require("firebase-functions");
 
+import express from "express";
 
-
-const express = require('express');
-const PORT = 3000;
+//const express = require('express');
+const PORT = 9000;
 const app  = express();
 
 app.get('/', (req,res,next)=>{
