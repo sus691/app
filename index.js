@@ -16,26 +16,27 @@ app.set('view engine', 'ejs');
 let day = "";
 
 let items  = ["Buy food", "Make food", "Eat food"];
-let workitems = ["hi", "bye"]  
+
+
+
+
+
+
+
+
+
 
 
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+//app.use(express.static("public"));
 
 
 app.get("/todolist", function(req, res){
 
-    let today = new Date();
-    let currentDay = today.getDay();
 
-    let options = {
-        weekday : "long", 
-        day: "numeric",
-        month: "long"
-    }; 
 
-    day = today.toLocaleDateString("en-US", options);    
+    day = sunday;    
     
     res.render("list", {listtitle:day, newlistitems: items});
     
