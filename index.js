@@ -9,6 +9,7 @@ import bodyParser from "body-parser";
 const PORT = 9001;
 const app  = express();
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 
 
@@ -21,6 +22,10 @@ app.set('view engine', 'ejs');
 
 
 
+
+
+app.use(bodyParser.urlencoded({extended: true}));
+//app.use(express.static("public"));
 
 
 
@@ -31,8 +36,8 @@ app.set('view engine', 'ejs');
 
 app.get('/todolist', (req,res,next)=>{
 
-    res.send('ho');
-    //res.render("as.ejs");
+
+    res.render("as.ejs");
 });
 
 
