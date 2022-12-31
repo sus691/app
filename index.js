@@ -29,11 +29,11 @@ app.set('view engine', 'ejs');
 
 
 
-// app.get('/todolist', (req,res,next)=>{
+app.get('/todolist', (req,res,next)=>{
 
-
-//     res.render("as.ejs");
-// });
+    res.send('ho');
+    //res.render("as.ejs");
+});
 
 
 
