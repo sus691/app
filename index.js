@@ -9,10 +9,10 @@ import bodyParser from "body-parser";
 const PORT = 9001;
 const app  = express();
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
 
 
-
+app.use('/static', express.static(__dirname+'/static'));
 
 
 
