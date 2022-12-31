@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 
-app.get('/todolist', (req,res)=>{
+app.get('/', (req,res)=>{
 
 
     res.render('as');
@@ -50,12 +50,12 @@ app.get('/todolist', (req,res)=>{
 
 
 
-app.get('/', (req,res,next)=>{
+app.get('/hello', (req,res,next)=>{
     res.send('Hello fucking world  2');
 });
 
 
-app.get('/hello', (req,res,next)=>{
+app.get('/hi', (req,res,next)=>{
     res.send('yea hello');
 });
 
