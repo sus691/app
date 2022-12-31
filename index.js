@@ -3,7 +3,7 @@
 import express from "express";
 
 //const express = require('express');
-//import bodyParser from "body-parser";
+import bodyParser from "body-parser";
 
 
 const PORT = 9000;
@@ -13,16 +13,52 @@ app.set('view engine', 'ejs');
 
 
 
+let day = "";
+
+let items  = ["Buy food", "Make food", "Eat food"];
+let workitems = ["hi", "bye"]  
 
 
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
 
 
+app.get("/todolist", function(req, res){
 
+    let today = new Date();
+    let currentDay = today.getDay();
 
-app.get('/hello', (req,res,next)=>{
-    res.send('yea hello');
+    let options = {
+        weekday : "long", 
+        day: "numeric",
+        month: "long"
+    }; 
+
+    day = today.toLocaleDateString("en-US", options);    
+    
+    res.render("list", {listtitle:day, newlistitems: items});
+    
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -36,6 +72,10 @@ app.get('/', (req,res,next)=>{
     res.send('Hello fucking world  2');
 });
 
+
+app.get('/hello', (req,res,next)=>{
+    res.send('yea hello');
+});
 
 
 
